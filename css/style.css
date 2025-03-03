@@ -35,6 +35,8 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .background {
@@ -64,7 +66,7 @@ p {
   width: 100vw;
   height: 40vh;
   bottom: 0;
-  border-radius: 90% 0 0 0;
+  border-radius: 10% 0 0 0;
   background-color: var(--dashboard-gray);
   display: grid;
   place-items: center;
@@ -98,6 +100,17 @@ p {
   ); */
   background: var(--dashboard-dark-gray);
 }
+
+#speedometer {
+  position: absolute;
+  left: 10em;
+  bottom: 15em;
+  height: 30vh;
+  width: 50vw;
+  background: var(--dashboard-dark-gray);
+  border-radius: 75% 75% 50% 50%/ 75% 75% 50% 50%;
+  z-index: 1;
+}
 #mirror {
   position: absolute;
   left: -16em;
@@ -124,13 +137,58 @@ p {
   background-color: rgb(76, 76, 76);
 }
 
+#steeringWheel {
+  position: absolute;
+  left: 15em;
+  bottom: -15em;
+  width: 50em;
+  aspect-ratio: 1/1;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(191, 191, 191, 0) 20%,
+    rgba(13, 13, 13, 0) 60%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(70, 70, 70, 1) 80%
+  );
+  border-radius: 100%;
+  z-index: 1;
+}
+
+#steeringWheel::before {
+  position: absolute;
+  background-color:black;
+  border-radius: 50% 50% 25% 25%/ 50% 0% 25% 25%;
+  bottom: 42%;
+  left: 5%;
+  width: 20em;
+  height: 7.5em;
+  content: "";
+  z-index: 2;
+  transform: rotate(-10deg);
+}
+#steeringWheel::after {
+  position: absolute;
+  background-color:black;
+  border-radius: 0% 50% 25% 25% ;
+  bottom: 42%;
+  right: 5%;
+  width: 20em;
+  height: 7.5em;
+  content: "";
+  z-index: 2;
+  transform: rotate(10deg);
+}
+
 .date {
   position: absolute;
-  bottom: 1em;
-  right: 1em;
+  bottom: 3em;
+  right: 0;
   background-color: gray;
   height: fit-content;
   border: 0.5em solid black;
+  scale: 0.7;
 }
 
 .date::before {
