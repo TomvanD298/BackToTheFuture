@@ -132,6 +132,7 @@ header section div:nth-of-type(2) div span {
   to {
     opacity: 0;
     scale: 100;
+    display: none;
   }
 }
 
@@ -399,6 +400,7 @@ fieldset {
   border: none;
 }
 
+/* -------- Months -------- */
 fieldset:has([value="1"]:checked) div::after {
   content: "jan";
 }
@@ -436,30 +438,33 @@ fieldset:has([value="12"]:checked) div::after {
   content: "dec";
 }
 
+/* -------- Days -------- */
 fieldset:has([value="13"]:checked) div::after {
-  content: "5";
+  content: "01";
 }
 fieldset:has([value="14"]:checked) div::after {
-  content: "6";
+  content: "05";
 }
 fieldset:has([value="15"]:checked) div::after {
-  content: "7";
+  content: "07";
 }
 fieldset:has([value="16"]:checked) div::after {
-  content: "8";
+  content: "09";
 }
 fieldset:has([value="17"]:checked) div::after {
-  content: "9";
-}
-fieldset:has([value="18"]:checked) div::after {
-  content: "10";
-}
-fieldset:has([value="19"]:checked) div::after {
   content: "11";
 }
-fieldset:has([value="20"]:checked) div::after {
-  content: "12";
+fieldset:has([value="18"]:checked) div::after {
+  content: "17";
 }
+fieldset:has([value="19"]:checked) div::after {
+  content: "23";
+}
+fieldset:has([value="20"]:checked) div::after {
+  content: "28";
+}
+
+/* -------- Years -------- */
 
 fieldset:has([value="21"]:checked) div::after {
   content: "1885";
@@ -474,32 +479,34 @@ fieldset:has([value="24"]:checked) div::after {
   content: "2015";
 }
 
+/* -------- Hours -------- */
+
 fieldset:has([value="25"]:checked) div::after {
-  content: "1";
+  content: "01";
 }
 fieldset:has([value="26"]:checked) div::after {
-  content: "2";
+  content: "02";
 }
 fieldset:has([value="27"]:checked) div::after {
-  content: "3";
+  content: "03";
 }
 fieldset:has([value="28"]:checked) div::after {
-  content: "4";
+  content: "04";
 }
 fieldset:has([value="29"]:checked) div::after {
-  content: "5";
+  content: "05";
 }
 fieldset:has([value="30"]:checked) div::after {
-  content: "6";
+  content: "06";
 }
 fieldset:has([value="31"]:checked) div::after {
-  content: "7";
+  content: "07";
 }
 fieldset:has([value="32"]:checked) div::after {
-  content: "8";
+  content: "08";
 }
 fieldset:has([value="33"]:checked) div::after {
-  content: "9";
+  content: "09";
 }
 fieldset:has([value="34"]:checked) div::after {
   content: "10";
@@ -509,6 +516,27 @@ fieldset:has([value="35"]:checked) div::after {
 }
 fieldset:has([value="36"]:checked) div::after {
   content: "12";
+}
+
+/* -------- Minutes -------- */
+
+fieldset:has([value="37"]:checked) div::after {
+  content: "00";
+}
+fieldset:has([value="38"]:checked) div::after {
+  content: "01";
+}
+fieldset:has([value="39"]:checked) div::after {
+  content: "15";
+}
+fieldset:has([value="40"]:checked) div::after {
+  content: "30";
+}
+fieldset:has([value="41"]:checked) div::after {
+  content: "45";
+}
+fieldset:has([value="42"]:checked) div::after {
+  content: "59";
 }
 
 input {
