@@ -393,3 +393,141 @@ h3::after {
 #min::after {
   content: var(--date-min);
 }
+
+fieldset {
+  position: relative;
+  border: none;
+}
+
+fieldset:has([value="1"]:checked) div::after {
+  content: "jan";
+}
+fieldset:has([value="2"]:checked) div::after {
+  content: "feb";
+}
+fieldset:has([value="3"]:checked) div::after {
+  content: "mar";
+}
+fieldset:has([value="4"]:checked) div::after {
+  content: "apr";
+}
+fieldset:has([value="5"]:checked) div::after {
+  content: "may";
+}
+fieldset:has([value="6"]:checked) div::after {
+  content: "jun";
+}
+fieldset:has([value="7"]:checked) div::after {
+  content: "jul";
+}
+fieldset:has([value="8"]:checked) div::after {
+  content: "aug";
+}
+fieldset:has([value="9"]:checked) div::after {
+  content: "sep";
+}
+fieldset:has([value="10"]:checked) div::after {
+  content: "oct";
+}
+fieldset:has([value="11"]:checked) div::after {
+  content: "nov";
+}
+fieldset:has([value="12"]:checked) div::after {
+  content: "dec";
+}
+
+fieldset:has([value="13"]:checked) div::after {
+  content: "5";
+}
+fieldset:has([value="14"]:checked) div::after {
+  content: "6";
+}
+fieldset:has([value="15"]:checked) div::after {
+  content: "7";
+}
+fieldset:has([value="16"]:checked) div::after {
+  content: "8";
+}
+fieldset:has([value="17"]:checked) div::after {
+  content: "9";
+}
+fieldset:has([value="18"]:checked) div::after {
+  content: "10";
+}
+fieldset:has([value="19"]:checked) div::after {
+  content: "11";
+}
+fieldset:has([value="20"]:checked) div::after {
+  content: "12";
+}
+
+fieldset:has([value="21"]:checked) div::after {
+  content: "1885";
+}
+fieldset:has([value="22"]:checked) div::after {
+  content: "1955";
+}
+fieldset:has([value="23"]:checked) div::after {
+  content: "1985";
+}
+fieldset:has([value="24"]:checked) div::after {
+  content: "2015";
+}
+
+fieldset:has([value="25"]:checked) div::after {
+  content: "1";
+}
+fieldset:has([value="26"]:checked) div::after {
+  content: "2";
+}
+fieldset:has([value="27"]:checked) div::after {
+  content: "3";
+}
+fieldset:has([value="28"]:checked) div::after {
+  content: "4";
+}
+fieldset:has([value="29"]:checked) div::after {
+  content: "5";
+}
+fieldset:has([value="30"]:checked) div::after {
+  content: "6";
+}
+fieldset:has([value="31"]:checked) div::after {
+  content: "7";
+}
+fieldset:has([value="32"]:checked) div::after {
+  content: "8";
+}
+fieldset:has([value="33"]:checked) div::after {
+  content: "9";
+}
+fieldset:has([value="34"]:checked) div::after {
+  content: "10";
+}
+fieldset:has([value="35"]:checked) div::after {
+  content: "11";
+}
+fieldset:has([value="36"]:checked) div::after {
+  content: "12";
+}
+
+input {
+  display: none;
+  appearance: none;
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+fieldset div {
+  font-family: digital-7;
+  font-size: 2em;
+  color: var(--time-destination);
+  background-color: #222;
+  padding: 0.5em;
+}
+
+input:checked + input,
+input:nth-of-type(1):has(~ input:last-of-type:checked) {
+  display: block;
+}
