@@ -13,7 +13,7 @@
   src: url(../fonts/Inter/Inter-VariableFont_opsz\wght.ttf);
 }
 
-:root {
+html {
   --text-color: #fff;
   --dashboard-gray: gray;
   --dashboard-dark-gray: rgb(57, 57, 57);
@@ -38,6 +38,124 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
+/* ////////////////////////////////////////////////// */
+/* Title */
+/* /////////////////////////////////////////////////// */
+
+header {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  z-index: 999999999999999;
+  animation: --rise 2s both ease-out, --away 3s 2s both ease-in;
+  /* animation: --rise 2s both ease-out; */
+}
+
+header span {
+  font-family: BTTF;
+  font-size: 10vw;
+  color: black;
+  text-align: center;
+
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: lightblue;
+  font-synthesis: none;
+}
+header section {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+header section > div:first-of-type {
+  background: linear-gradient(180deg, #dd3029 0%, #fcdc30 100%);
+  background-clip: text;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: --slideLeft 1s ease-out both;
+}
+
+header section > div:first-of-type span {
+  font-size: 14vw;
+  padding: 0 10px 0 0;
+}
+
+header section > div:first-of-type span:nth-of-type(2) {
+  padding: 0 100px 0 0;
+  margin: 0 0 0 -50px;
+}
+
+header section div:nth-of-type(2) {
+  display: flex;
+  text-transform: lowercase;
+  background: linear-gradient(180deg, #fcdc30 0%, #db3424 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: --slideRight 1s ease-out both;
+}
+
+header section div:nth-of-type(2) div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+header section div:nth-of-type(2) div span {
+  font-size: 4vw;
+}
+
+@keyframes --rise {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+    letter-spacing: 0.3em;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    letter-spacing: 0;
+    filter: blur(0px);
+  }
+}
+
+@keyframes --away {
+  from {
+    opacity: 1;
+    scale: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 100;
+  }
+}
+
+@keyframes --slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes --slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ////////////////////////////////////////////////// */
+/* Title */
+/* /////////////////////////////////////////////////// */
 
 .background {
   justify-content: space-between;
@@ -101,17 +219,17 @@ p {
   background: var(--dashboard-dark-gray);
 }
 
-#speedometer {
+/* #speedometer {
   position: absolute;
-  left: 10em;
-  bottom: 15em;
+  left: 5em;
+  bottom: 10em;
   height: 30vh;
   width: 50vw;
   background: var(--dashboard-dark-gray);
   border-radius: 75% 75% 50% 50%/ 75% 75% 50% 50%;
   z-index: 1;
-}
-#mirror {
+} */
+/* #mirror {
   position: absolute;
   left: -16em;
   bottom: 1em;
@@ -135,63 +253,18 @@ p {
   height: 3em;
   content: "";
   background-color: rgb(76, 76, 76);
-}
+} */
 
-#steeringWheel {
-  position: absolute;
-  left: 15em;
-  bottom: -15em;
-  width: 50em;
-  aspect-ratio: 1/1;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 20%,
-    rgba(191, 191, 191, 0) 20%,
-    rgba(13, 13, 13, 0) 60%,
-    rgba(0, 0, 0, 1) 60%,
-    rgba(70, 70, 70, 1) 80%
-  );
-  border-radius: 100%;
-  z-index: 1;
-}
-
-#steeringWheel::before {
-  position: absolute;
-  background-color:black;
-  border-radius: 50% 50% 25% 25%/ 50% 0% 25% 25%;
-  bottom: 42%;
-  left: 5%;
-  width: 20em;
-  height: 7.5em;
-  content: "";
-  z-index: 2;
-  transform: rotate(-10deg);
-}
-#steeringWheel::after {
-  position: absolute;
-  background-color:black;
-  border-radius: 0% 50% 25% 25% ;
-  bottom: 42%;
-  right: 5%;
-  width: 20em;
-  height: 7.5em;
-  content: "";
-  z-index: 2;
-  transform: rotate(10deg);
-}
-
-.date {
+main .date {
   position: absolute;
   bottom: 3em;
-  right: 0;
+  right: 1em;
   background-color: gray;
   height: fit-content;
   border: 0.5em solid black;
-  scale: 0.7;
 }
 
-.date::before {
+main .date::before {
   position: absolute;
   width: 5em;
   height: 26em;
@@ -202,7 +275,7 @@ p {
   clip-path: polygon(50% 0, 10% 75%, 50% 100%);
 }
 
-section {
+main section {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
@@ -212,13 +285,13 @@ section {
   height: 10vh;
 }
 
-section div {
+main section div {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
 
-section p {
+main section p {
   padding: 0 0.5em 0 0.5em;
   font-family: "inter";
   font-size: 1em;
@@ -227,12 +300,12 @@ section p {
   text-transform: uppercase;
 }
 
-section p:last-child {
+main section p:last-child {
   background-color: black;
   margin: 1em 0 1em 0;
 }
 
-section span {
+main section span {
   font-family: digital-7;
   font-size: 2em;
   color: var(--time-destination);
@@ -240,11 +313,11 @@ section span {
   padding: 0.5em;
 }
 
-section:nth-child(3) span {
+main section:nth-child(3) span {
   color: var(--time-present);
 }
 
-section:nth-child(5) span {
+main section:nth-child(5) span {
   color: var(--time-departed);
 }
 
