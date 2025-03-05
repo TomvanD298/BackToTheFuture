@@ -22,6 +22,14 @@
   <h4>👨‍🦲🇳🇱 Vormpjes met CSS</h4>
   <h4>👨‍🦲🇳🇱 Clip-path's</h4>
   <h3>Gedaan vandaag</h3>
+  <p>Ik ben vandaag begonnen met het maken van het dashboard, hier wilde ik meten het tijd display maken.</p>
+  <img width="300px" alt="Scherm­afbeelding 2025-03-05 om 09 40 34" src="https://github.com/user-attachments/assets/2f7e6fe0-05aa-4ddf-9bc1-563c3a39ab6e" />
+  <p>Voor de middelste regel wilde ik de huidige tijd doen. Hier heb ik met behulp van Chris variabelen gemaakt en deze in CSS gedaan. Hiermee kon ik met de content:""; tag de dijd in de     html inladen(Dit vond ik een omweg, want je kan vanuit js direct de dom manipuleren, maar dit wilde Sanne XD)</p>
+  <img width="300px" alt="Scherm­afbeelding 2025-03-05 om 09 34 52" src="https://github.com/user-attachments/assets/17bb1dc5-f6b5-4a02-bbc1-d4244b6cf1e0" />
+
+
+
+  
 </details>
 <details>
  <summary>Dinsdag</summary>
