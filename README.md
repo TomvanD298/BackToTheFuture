@@ -1,6 +1,8 @@
 # Back to the Future
 
  <p>Voor de Minor WEB Development moeten we met CSS een website maken puur met HTML en CSS<br> Ik heb gekozen om het dashboard van de Delorean uit Back to the Future <p>
+  <img width="400px" alt="Scherm­afbeelding 2025-03-05 om 09 45 54" src="https://github.com/user-attachments/assets/d985bf8a-b03f-4dbf-b1c2-13fe66245b13" />
+
 
  <h2> Ideë </h2>
  <h3>Opdracht: Control panel</3>
