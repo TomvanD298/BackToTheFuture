@@ -17,9 +17,9 @@ html {
   --text-color: #fff;
   --dashboard-gray: gray;
   --dashboard-dark-gray: rgb(57, 57, 57);
-  --time-destination: crimson;
-  --time-present: lightgreen;
-  --time-departed: yellow;
+  --time-red: crimson;
+  --time-green: lightgreen;
+  --time-yellow: yellow;
   --date-month: "";
   --date-day: "";
   --date-year: "";
@@ -60,7 +60,7 @@ header span {
   color: black;
   text-align: center;
 
-  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-width: 6px;
   -webkit-text-stroke-color: lightblue;
   font-synthesis: none;
 }
@@ -158,26 +158,23 @@ header section div:nth-of-type(2) div span {
 /* Title */
 /* /////////////////////////////////////////////////// */
 
-.background {
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  box-sizing: border-box;
-  background-image: linear-gradient(
-    180deg,
-    rgb(53, 33, 88) 0%,
-    rgb(136, 76, 237) 25%,
-    rgb(210, 54, 116) 75%,
-    rgb(136, 76, 237) 100%
-  );
-  z-index: -5;
-}
-
 p {
   bottom: 0;
   color: black;
   width: 100%;
   text-align: center;
+}
+
+#background {
+  position: absolute;
+  bottom: 10em;
+  left: 0;
+  z-index: -99999999;
+  background-image: url("../images/cowboy.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
 
 #dashboard {
@@ -186,18 +183,30 @@ p {
   height: 40vh;
   bottom: 0;
   border-radius: 10% 0 0 0;
-  background-color: var(--dashboard-gray);
+  background: linear-gradient(
+    0deg,
+    rgba(79, 79, 79, 1) 0%,
+    rgba(108, 108, 108, 1) 61%,
+    rgba(125, 125, 125, 1) 79%,
+    rgba(70, 70, 70, 1) 100%
+  );
+  /* background-color: var(--dashboard-gray); */
   display: grid;
   place-items: center;
 }
 
 #windshield {
   position: relative;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(126, 229, 246, 1) 0%,
     rgba(255, 255, 255, 1) 30%,
     rgba(255, 255, 255, 1) 100%
+  ); */
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0) 70%,
+    rgba(0, 212, 255, 0.4976584383753502) 100%
   );
   width: 100vw;
   height: 100vh;
@@ -210,40 +219,15 @@ p {
   height: 100vh;
   width: 10vw;
   transform: rotate(-25deg);
-  /* background: linear-gradient(
-    90deg,
-    rgba(70, 70, 70, 1) 0%,
-    rgba(148, 148, 148, 1) 40%,
-    rgba(191, 191, 191, 1) 70%,
-    rgba(148, 148, 148, 1) 100%
-  ); */
-  background: var(--dashboard-dark-gray);
-}
 
-/* #speedometer {
-  position: absolute;
-  left: 5em;
-  bottom: 10em;
-  height: 30vh;
-  width: 50vw;
-  background: var(--dashboard-dark-gray);
-  border-radius: 75% 75% 50% 50%/ 75% 75% 50% 50%;
-  z-index: 1;
-} */
-/* #mirror {
-  position: absolute;
-  left: -16em;
-  bottom: 1em;
-  width: 20em;
-  height: 10em;
   background: linear-gradient(
-    180deg,
-    rgba(126, 229, 246, 1) 0%,
-    rgba(255, 255, 255, 1) 30%,
-    rgba(255, 255, 255, 1) 100%
+    0deg,
+    rgba(29, 29, 29, 1) 0%,
+    rgba(87, 87, 87, 1) 61%,
+    rgba(108, 108, 108, 1) 79%,
+    rgba(27, 27, 27, 1) 100%
   );
-  border: rgb(76, 76, 76) 1em solid;
-  border-radius: 3em;
+  /* background: var(--dashboard-dark-gray); */
 }
 
 #mirror::after {
@@ -254,8 +238,7 @@ p {
   height: 3em;
   content: "";
   background-color: rgb(76, 76, 76);
-} */
-
+}
 main .date {
   position: absolute;
   bottom: 3em;
@@ -279,9 +262,9 @@ main .date::before {
 main section {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 0.5em;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 40vw;
   height: 10vh;
 }
@@ -297,7 +280,7 @@ main section p {
   font-family: "inter";
   font-size: 1em;
   color: white;
-  background-color: var(--time-destination);
+  background-color: var(--time-red);
   text-transform: uppercase;
 }
 
@@ -309,17 +292,17 @@ main section p:last-child {
 main section span {
   font-family: digital-7;
   font-size: 2em;
-  color: var(--time-destination);
+  color: var(--time-red);
   background-color: #222;
-  padding: 0.5em;
+  padding: 0.5em 1em 0.5em 1em;
 }
 
 main section:nth-child(3) span {
-  color: var(--time-present);
+  color: var(--time-green);
 }
 
 main section:nth-child(5) span {
-  color: var(--time-departed);
+  color: var(--time-yellow);
 }
 
 h3 {
@@ -341,6 +324,8 @@ h3::after {
 }
 
 .am-pm {
+  height: 100%;
+  margin-top: 10px;
   font-size: 0.5em;
   display: flex;
   flex-direction: column;
@@ -354,25 +339,24 @@ h3::after {
   width: 0.5em;
   height: 0.5em;
   border-radius: 50%;
-  background-color: var(--time-departed);
+  background-color: var(--time-red);
 }
 
 .am-pm span:nth-of-type(2) {
-  background-color: var(--time-destination);
-}
-
-.am-pm p {
-  margin: 0.5em 0 0.5em 0;
+  background-color: var(--time-yellow);
 }
 
 .timeNotation {
-  margin-top: 1.5em;
+  height: 100%;
+  margin-top: 10px;
 }
 
 .timeNotation span {
-  background-color: var(--time-departed);
+  background-color: var(--time-yellow);
   border-radius: 50%;
-  font-size: 0.5em;
+  max-width: 10px;
+  max-height: 10px;
+  padding: 5px;
 }
 
 #month::after {
@@ -395,167 +379,82 @@ h3::after {
   content: var(--date-min);
 }
 
+/* Met behulp van Sanne gemaakt. */
+
 fieldset {
-  position: relative;
+  width: 6em;
+  aspect-ratio: 1;
+  padding: 0;
   border: none;
+  display: grid;
 }
 
-/* -------- Months -------- */
-fieldset:has([value="1"]:checked) div::after {
-  content: "jan";
-}
-fieldset:has([value="2"]:checked) div::after {
-  content: "feb";
-}
-fieldset:has([value="3"]:checked) div::after {
-  content: "mar";
-}
-fieldset:has([value="4"]:checked) div::after {
-  content: "apr";
-}
-fieldset:has([value="5"]:checked) div::after {
-  content: "may";
-}
-fieldset:has([value="6"]:checked) div::after {
-  content: "jun";
-}
-fieldset:has([value="7"]:checked) div::after {
-  content: "jul";
-}
-fieldset:has([value="8"]:checked) div::after {
-  content: "aug";
-}
-fieldset:has([value="9"]:checked) div::after {
-  content: "sep";
-}
-fieldset:has([value="10"]:checked) div::after {
-  content: "oct";
-}
-fieldset:has([value="11"]:checked) div::after {
-  content: "nov";
-}
-fieldset:has([value="12"]:checked) div::after {
-  content: "dec";
+legend {
+  position: absolute;
+  left: -9999em;
+  margin-top: 0.5em;
 }
 
-/* -------- Days -------- */
-fieldset:has([value="13"]:checked) div::after {
-  content: "01";
-}
-fieldset:has([value="14"]:checked) div::after {
-  content: "05";
-}
-fieldset:has([value="15"]:checked) div::after {
-  content: "07";
-}
-fieldset:has([value="16"]:checked) div::after {
-  content: "09";
-}
-fieldset:has([value="17"]:checked) div::after {
-  content: "11";
-}
-fieldset:has([value="18"]:checked) div::after {
-  content: "17";
-}
-fieldset:has([value="19"]:checked) div::after {
-  content: "23";
-}
-fieldset:has([value="20"]:checked) div::after {
-  content: "28";
+label {
+  grid-area: 1/1;
+  position: relative;
+
+  pointer-events: none;
+  opacity: 0;
+
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: var(--time-red);
+  font-family: digital-7;
+  font-size: 2em;
+  padding: 0.2em;
+  display: grid;
+  place-items: center;
 }
 
-/* -------- Years -------- */
-
-fieldset:has([value="21"]:checked) div::after {
-  content: "1885";
-}
-fieldset:has([value="22"]:checked) div::after {
-  content: "1955";
-}
-fieldset:has([value="23"]:checked) div::after {
-  content: "1985";
-}
-fieldset:has([value="24"]:checked) div::after {
-  content: "2015";
+label:has(:checked) {
+  opacity: 1;
 }
 
-/* -------- Hours -------- */
-
-fieldset:has([value="25"]:checked) div::after {
-  content: "01";
-}
-fieldset:has([value="26"]:checked) div::after {
-  content: "02";
-}
-fieldset:has([value="27"]:checked) div::after {
-  content: "03";
-}
-fieldset:has([value="28"]:checked) div::after {
-  content: "04";
-}
-fieldset:has([value="29"]:checked) div::after {
-  content: "05";
-}
-fieldset:has([value="30"]:checked) div::after {
-  content: "06";
-}
-fieldset:has([value="31"]:checked) div::after {
-  content: "07";
-}
-fieldset:has([value="32"]:checked) div::after {
-  content: "08";
-}
-fieldset:has([value="33"]:checked) div::after {
-  content: "09";
-}
-fieldset:has([value="34"]:checked) div::after {
-  content: "10";
-}
-fieldset:has([value="35"]:checked) div::after {
-  content: "11";
-}
-fieldset:has([value="36"]:checked) div::after {
-  content: "12";
-}
-
-/* -------- Minutes -------- */
-
-fieldset:has([value="37"]:checked) div::after {
-  content: "00";
-}
-fieldset:has([value="38"]:checked) div::after {
-  content: "01";
-}
-fieldset:has([value="39"]:checked) div::after {
-  content: "15";
-}
-fieldset:has([value="40"]:checked) div::after {
-  content: "30";
-}
-fieldset:has([value="41"]:checked) div::after {
-  content: "45";
-}
-fieldset:has([value="42"]:checked) div::after {
-  content: "59";
+/* het label na het label dat checked heeft kun je op klikken */
+label:has( :checked ) + label,
+/* en je kunt klikken op het 1e label als het laatste label checked heeft */
+label:nth-of-type(1):has( ~ label:last-of-type :checked ) {
+  pointer-events: all;
 }
 
 input {
-  display: none;
   appearance: none;
   position: absolute;
   inset: 0;
   margin: 0;
 }
 
-fieldset div {
-  font-family: digital-7;
-  font-size: 2em;
-  color: var(--time-destination);
-  background-color: #222;
-  padding: 0.5em;
+/* ////////////////////////////////////////////////// */
+/* Go button */
+/* /////////////////////////////////////////////////// */
+
+button {
+  position: absolute;
+  bottom: 5%;
+  left: 45vw;
+  border: 10px solid black;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 111, 111, 1) 0%,
+    rgba(159, 0, 32, 1) 100%
+  );
+  box-shadow: black 0.1em 0.1em 0.1em;
+  color: white;
+  font-family: BTTF;
+  font-size: 2vw;
+  width: 10%;
+  aspect-ratio: 1;
 }
 
-input:checked + input,
-input:nth-of-type(1):has(~ input:last-of-type:checked) {
-  display: block;
+button:active {
+  transform: translate(0.1em, 0.1em);
+  box-shadow: none;
 }
