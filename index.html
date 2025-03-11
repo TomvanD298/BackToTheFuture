@@ -8,7 +8,7 @@
     <title>Marty McFly</title>
   </head>
   <body>
-    <!-- <header>
+    <header>
       <section>
         <div>
           <span>Back</span>
@@ -22,209 +22,243 @@
           <span>Future</span>
         </div>
       </section>
-    </header> -->
+    </header>
 
     <main>
-      <section id="windshield">
-        <div id="frame"></div>
-      </section>
-      <div id="background"></div>
-      >
+      <delorean>
+        <section id="windshield"></section>
+        <div id="background"></div>
 
-      <section id="dashboard">
-        <section class="date">
-          <section>
-            <div>
-              <p>Month</p>
-              <fieldset>
-                <legend>maand</legend>
+        <div id="steeringwheel">
+          <label><input type="checkbox" name="steeringwheel" /></label>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>DMC</span>
+        </div>
 
-                <label><input type="radio" name="maand" checked />jan</label>
-                <label><input type="radio" name="maand" />feb</label>
-                <label><input type="radio" name="maand" />maa</label>
-                <label><input type="radio" name="maand" />apr</label>
+        <section id="dashboard">
+          <section class="date">
+            <section>
+              <div>
+                <p>Month</p>
+                <fieldset>
+                  <legend>maand</legend>
 
-                <label><input type="radio" name="maand" />may</label>
-                <label><input type="radio" name="maand" />jun</label>
-                <label><input type="radio" name="maand" />jul</label>
-                <label><input type="radio" name="maand" />aug</label>
+                  <label><input type="radio" name="maand" checked />jan</label>
+                  <label><input type="radio" name="maand" />feb</label>
+                  <label><input type="radio" name="maand" />maa</label>
+                  <label><input type="radio" name="maand" />apr</label>
 
-                <label><input type="radio" name="maand" />sep</label>
-                <label><input type="radio" name="maand" />oct</label>
-                <label><input type="radio" name="maand" />nov</label>
-                <label><input type="radio" name="maand" />dec</label>
-              </fieldset>
-            </div>
-            <div>
-              <p>Day</p>
-              <fieldset>
-                <legend>dag</legend>
+                  <label><input type="radio" name="maand" />may</label>
+                  <label><input type="radio" name="maand" />jun</label>
+                  <label><input type="radio" name="maand" />jul</label>
+                  <label><input type="radio" name="maand" />aug</label>
 
-                <label><input type="radio" name="dag" checked />1</label>
-                <label><input type="radio" name="dag" />2</label>
-                <label><input type="radio" name="dag" />3</label>
-                <label><input type="radio" name="dag" />4</label>
-                <label><input type="radio" name="dag" />5</label>
-                <label><input type="radio" name="dag" />6</label>
-                <label><input type="radio" name="dag" />7</label>
-                <label><input type="radio" name="dag" />8</label>
-                <label><input type="radio" name="dag" />9</label>
-                <label><input type="radio" name="dag" />10</label>
-                <label><input type="radio" name="dag" />11</label>
-                <label><input type="radio" name="dag" />12</label>
-                <label><input type="radio" name="dag" />13</label>
-                <label><input type="radio" name="dag" />14</label>
-                <label><input type="radio" name="dag" />15</label>
-                <label><input type="radio" name="dag" />16</label>
-                <label><input type="radio" name="dag" />17</label>
-                <label><input type="radio" name="dag" />18</label>
-                <label><input type="radio" name="dag" />19</label>
-                <label><input type="radio" name="dag" />20</label>
-                <label><input type="radio" name="dag" />21</label>
-                <label><input type="radio" name="dag" />22</label>
-                <label><input type="radio" name="dag" />23</label>
-                <label><input type="radio" name="dag" />24</label>
-                <label><input type="radio" name="dag" />25</label>
-                <label><input type="radio" name="dag" />26</label>
-                <label><input type="radio" name="dag" />27</label>
-                <label><input type="radio" name="dag" />28</label>
-                <label><input type="radio" name="dag" />29</label>
-                <label><input type="radio" name="dag" />30</label>
-                <label><input type="radio" name="dag" />31</label>
-              </fieldset>
-            </div>
-            <div>
-              <p>Year</p>
-              <fieldset>
-                <legend>jaar</legend>
-                <label><input type="radio" name="jaar" />1855</label>
-                <label><input type="radio" name="jaar" checked />1955</label>
-                <label><input type="radio" name="jaar" />1985</label>
-                <label><input type="radio" name="jaar" />2015</label>
-              </fieldset>
-            </div>
-            <div class="am-pm">
-              <p>am</p>
-              <span></span>
-              <p>pm</p>
-              <span></span>
-            </div>
-            <div>
-              <p>Hour</p>
-              <fieldset>
-                <legend>uur</legend>
-                <label><input type="radio" name="hour" checked />1</label>
-                <label><input type="radio" name="hour" />2</label>
-                <label><input type="radio" name="hour" />3</label>
-                <label><input type="radio" name="hour" />4</label>
-                <label><input type="radio" name="hour" />5</label>
-                <label><input type="radio" name="hour" />6</label>
-                <label><input type="radio" name="hour" />7</label>
-                <label><input type="radio" name="hour" />8</label>
-                <label><input type="radio" name="hour" />9</label>
-                <label><input type="radio" name="hour" />10</label>
-                <label><input type="radio" name="hour" />11</label>
-                <label><input type="radio" name="hour" />12</label>
-              </fieldset>
-            </div>
-            <div class="timeNotation">
-              <span></span>
-              <span></span>
-            </div>
-            <div>
-              <p>Min</p>
-              <fieldset>
-                <legend>minuut</legend>
-                <label><input type="radio" name="minute" checked />00</label>
-                <label><input type="radio" name="minute" />5</label>
-                <label><input type="radio" name="minute" />10</label>
-                <label><input type="radio" name="minute" />15</label>
-                <label><input type="radio" name="minute" />20</label>
-                <label><input type="radio" name="minute" />25</label>
-                <label><input type="radio" name="minute" />30</label>
-                <label><input type="radio" name="minute" />35</label>
-                <label><input type="radio" name="minute" />40</label>
-                <label><input type="radio" name="minute" />45</label>
-                <label><input type="radio" name="minute" />50</label>
-                <label><input type="radio" name="minute" />55</label>
-                <label><input type="radio" name="minute" />60</label>
-              </fieldset>
-            </div>
+                  <label><input type="radio" name="maand" />sep</label>
+                  <label><input type="radio" name="maand" />oct</label>
+                  <label><input type="radio" name="maand" />nov</label>
+                  <label><input type="radio" name="maand" />dec</label>
+                </fieldset>
+              </div>
+              <div>
+                <p>Day</p>
+                <fieldset>
+                  <legend>dag</legend>
+
+                  <label><input type="radio" name="dag" checked />1</label>
+                  <label><input type="radio" name="dag" />2</label>
+                  <label><input type="radio" name="dag" />3</label>
+                  <label><input type="radio" name="dag" />4</label>
+                  <label><input type="radio" name="dag" />5</label>
+                  <label><input type="radio" name="dag" />6</label>
+                  <label><input type="radio" name="dag" />7</label>
+                  <label><input type="radio" name="dag" />8</label>
+                  <label><input type="radio" name="dag" />9</label>
+                  <label><input type="radio" name="dag" />10</label>
+                  <label><input type="radio" name="dag" />11</label>
+                  <label><input type="radio" name="dag" />12</label>
+                  <label><input type="radio" name="dag" />13</label>
+                  <label><input type="radio" name="dag" />14</label>
+                  <label><input type="radio" name="dag" />15</label>
+                  <label><input type="radio" name="dag" />16</label>
+                  <label><input type="radio" name="dag" />17</label>
+                  <label><input type="radio" name="dag" />18</label>
+                  <label><input type="radio" name="dag" />19</label>
+                  <label><input type="radio" name="dag" />20</label>
+                  <label><input type="radio" name="dag" />21</label>
+                  <label><input type="radio" name="dag" />22</label>
+                  <label><input type="radio" name="dag" />23</label>
+                  <label><input type="radio" name="dag" />24</label>
+                  <label><input type="radio" name="dag" />25</label>
+                  <label><input type="radio" name="dag" />26</label>
+                  <label><input type="radio" name="dag" />27</label>
+                  <label><input type="radio" name="dag" />28</label>
+                  <label><input type="radio" name="dag" />29</label>
+                  <label><input type="radio" name="dag" />30</label>
+                  <label><input type="radio" name="dag" />31</label>
+                </fieldset>
+              </div>
+              <div>
+                <p>Year</p>
+                <fieldset>
+                  <legend>jaar</legend>
+                  <label
+                    ><input type="radio" name="jaar" value="1855" />1855</label
+                  >
+                  <label
+                    ><input type="radio" name="jaar" value="1955" />1955</label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="jaar"
+                      value="1985"
+                      checked
+                    />1985</label
+                  >
+                  <label
+                    ><input type="radio" name="jaar" value="2015" />2015</label
+                  >
+                </fieldset>
+              </div>
+              <div class="am-pm">
+                <p>am</p>
+                <span></span>
+                <p>pm</p>
+                <span></span>
+              </div>
+              <div>
+                <p>Hour</p>
+                <fieldset>
+                  <legend>uur</legend>
+                  <label><input type="radio" name="hour" checked />1</label>
+                  <label><input type="radio" name="hour" />2</label>
+                  <label><input type="radio" name="hour" />3</label>
+                  <label><input type="radio" name="hour" />4</label>
+                  <label><input type="radio" name="hour" />5</label>
+                  <label><input type="radio" name="hour" />6</label>
+                  <label><input type="radio" name="hour" />7</label>
+                  <label><input type="radio" name="hour" />8</label>
+                  <label><input type="radio" name="hour" />9</label>
+                  <label><input type="radio" name="hour" />10</label>
+                  <label><input type="radio" name="hour" />11</label>
+                  <label><input type="radio" name="hour" />12</label>
+                </fieldset>
+              </div>
+              <div class="timeNotation">
+                <span></span>
+                <span></span>
+              </div>
+              <div>
+                <p>Min</p>
+                <fieldset>
+                  <legend>minuut</legend>
+                  <label><input type="radio" name="minute" checked />00</label>
+                  <label><input type="radio" name="minute" />5</label>
+                  <label><input type="radio" name="minute" />10</label>
+                  <label><input type="radio" name="minute" />15</label>
+                  <label><input type="radio" name="minute" />20</label>
+                  <label><input type="radio" name="minute" />25</label>
+                  <label><input type="radio" name="minute" />30</label>
+                  <label><input type="radio" name="minute" />35</label>
+                  <label><input type="radio" name="minute" />40</label>
+                  <label><input type="radio" name="minute" />45</label>
+                  <label><input type="radio" name="minute" />50</label>
+                  <label><input type="radio" name="minute" />55</label>
+                  <label><input type="radio" name="minute" />60</label>
+                </fieldset>
+              </div>
+            </section>
+            <h3>Destination Time</h3>
+
+            <section>
+              <div>
+                <p>Month</p>
+                <span id="month"> </span>
+              </div>
+              <div>
+                <p>Day</p>
+                <span id="day"></span>
+              </div>
+              <div>
+                <p>Year</p>
+                <span id="year"></span>
+              </div>
+              <div class="am-pm">
+                <p>am</p>
+                <span></span>
+                <p>pm</p>
+                <span></span>
+              </div>
+              <div>
+                <p>Hour</p>
+                <span id="hour"></span>
+              </div>
+              <div class="timeNotation">
+                <span></span>
+                <span></span>
+              </div>
+              <div>
+                <p>Min</p>
+                <span id="min"></span>
+              </div>
+            </section>
+
+            <h3>Present Time</h3>
+
+            <section>
+              <div>
+                <p>Month</p>
+                <span>OCT</span>
+              </div>
+              <div>
+                <p>Day</p>
+                <span>26</span>
+              </div>
+              <div>
+                <p>Year</p>
+                <span>1985</span>
+              </div>
+              <div class="am-pm">
+                <p>am</p>
+                <span></span>
+                <p>pm</p>
+                <span></span>
+              </div>
+              <div>
+                <p>Hour</p>
+                <span>10</span>
+              </div>
+              <div class="timeNotation">
+                <span></span>
+                <span></span>
+              </div>
+              <div>
+                <p>Min</p>
+                <span>33</span>
+              </div>
+            </section>
+            <h3>Last time departed</h3>
           </section>
-          <h3>Destination Time</h3>
-
-          <section>
-            <div>
-              <p>Month</p>
-              <span id="month"> </span>
-            </div>
-            <div>
-              <p>Day</p>
-              <span id="day"></span>
-            </div>
-            <div>
-              <p>Year</p>
-              <span id="year"></span>
-            </div>
-            <div class="am-pm">
-              <p>am</p>
-              <span></span>
-              <p>pm</p>
-              <span></span>
-            </div>
-            <div>
-              <p>Hour</p>
-              <span id="hour"></span>
-            </div>
-            <div class="timeNotation">
-              <span></span>
-              <span></span>
-            </div>
-            <div>
-              <p>Min</p>
-              <span id="min"></span>
-            </div>
-          </section>
-
-          <h3>Present Time</h3>
-
-          <section>
-            <div>
-              <p>Month</p>
-              <span>OCT</span>
-            </div>
-            <div>
-              <p>Day</p>
-              <span>26</span>
-            </div>
-            <div>
-              <p>Year</p>
-              <span>1985</span>
-            </div>
-            <div class="am-pm">
-              <p>am</p>
-              <span></span>
-              <p>pm</p>
-              <span></span>
-            </div>
-            <div>
-              <p>Hour</p>
-              <span>10</span>
-            </div>
-            <div class="timeNotation">
-              <span></span>
-              <span></span>
-            </div>
-            <div>
-              <p>Min</p>
-              <span>33</span>
-            </div>
-          </section>
-          <h3>Last time departed</h3>
         </section>
-      </section>
 
-      <button>go ></button>
+        <div id="go-button">
+          <input type="checkbox" id="go" value="future" />
+          <label for="go" class="go-label"> go &gt;</label>
+        </div>
+
+        <div id="key">
+          <input type="checkbox" id="ignition" />
+          <label for="ignition" class="ignition-label"> </label>
+          <span></span>
+          <audio id="carSound" src="audio/startup.mp3"></audio>
+        </div>
+      </delorean>
     </main>
     <script src="./JS/script.js"></script>
   </body>

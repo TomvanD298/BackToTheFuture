@@ -11,3 +11,17 @@ function updateDateTime() {
 
   updateDateTime();
   setInterval(updateDateTime, 1000);
+
+
+
+  const keyToggle = document.getElementById('ignition');
+  const carSound = document.getElementById('carSound');
+
+  keyToggle.addEventListener('change', () => {
+    if (keyToggle.checked) {
+        carSound.play();
+    } else {
+        carSound.pause();
+        carSound.currentTime = 0;
+    }
+});

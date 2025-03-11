@@ -15,7 +15,7 @@
 
 html {
   --text-color: #fff;
-  --dashboard-gray: gray;
+  --dashboard-gray: rgb(86, 86, 86);
   --dashboard-dark-gray: rgb(57, 57, 57);
   --time-red: crimson;
   --time-green: lightgreen;
@@ -25,6 +25,8 @@ html {
   --date-year: "";
   --date-hours: "";
   --date-min: "";
+
+  --background: url("../images/mall.jpeg");
 }
 
 * {
@@ -52,61 +54,61 @@ header {
   z-index: 999999999999999;
   animation: --rise 2s both ease-out, --away 3s 2s both ease-in;
   /* animation: --rise 2s both ease-out; */
-}
 
-header span {
-  font-family: BTTF;
-  font-size: 10vw;
-  color: black;
-  text-align: center;
+  & span {
+    font-family: BTTF;
+    font-size: 10vw;
+    color: black;
+    text-align: center;
 
-  -webkit-text-stroke-width: 6px;
-  -webkit-text-stroke-color: lightblue;
-  font-synthesis: none;
-}
-header section {
-  display: grid;
-  place-items: center;
-  width: 100%;
-}
+    -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-color: lightblue;
+    font-synthesis: none;
+  }
+  & section {
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
 
-header section > div:first-of-type {
-  background: linear-gradient(180deg, #dd3029 0%, #fcdc30 100%);
-  background-clip: text;
-  text-transform: uppercase;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: --slideLeft 1s ease-out both;
-}
+  & section > div:first-of-type {
+    background: linear-gradient(180deg, #dd3029 0%, #fcdc30 100%);
+    background-clip: text;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: --slideLeft 1s ease-out both;
+  }
 
-header section > div:first-of-type span {
-  font-size: 14vw;
-  padding: 0 10px 0 0;
-}
+  & section > div:first-of-type span {
+    font-size: 14vw;
+    padding: 0 10px 0 0;
+  }
 
-header section > div:first-of-type span:nth-of-type(2) {
-  padding: 0 100px 0 0;
-  margin: 0 0 0 -50px;
-}
+  & section > div:first-of-type span:nth-of-type(2) {
+    padding: 0 100px 0 0;
+    margin: 0 0 0 -50px;
+  }
 
-header section div:nth-of-type(2) {
-  display: flex;
-  text-transform: lowercase;
-  background: linear-gradient(180deg, #fcdc30 0%, #db3424 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: --slideRight 1s ease-out both;
-}
+  & section div:nth-of-type(2) {
+    display: flex;
+    text-transform: lowercase;
+    background: linear-gradient(180deg, #fcdc30 0%, #db3424 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: --slideRight 1s ease-out both;
+  }
 
-header section div:nth-of-type(2) div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+  & section div:nth-of-type(2) div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-header section div:nth-of-type(2) div span {
-  font-size: 4vw;
+  & section div:nth-of-type(2) div span {
+    font-size: 4vw;
+  }
 }
 
 @keyframes --rise {
@@ -155,13 +157,11 @@ header section div:nth-of-type(2) div span {
 }
 
 /* ////////////////////////////////////////////////// */
-/* Title */
+/* car */
 /* /////////////////////////////////////////////////// */
-
 p {
   bottom: 0;
   color: black;
-  width: 100%;
   text-align: center;
 }
 
@@ -170,7 +170,7 @@ p {
   bottom: 10em;
   left: 0;
   z-index: -99999999;
-  background-image: url("../images/cowboy.png");
+  background-image: var(--background);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -182,27 +182,20 @@ p {
   width: 100vw;
   height: 40vh;
   bottom: 0;
-  border-radius: 10% 0 0 0;
   background: linear-gradient(
     0deg,
-    rgba(79, 79, 79, 1) 0%,
+    rgb(60, 60, 60) 0%,
     rgba(108, 108, 108, 1) 61%,
     rgba(125, 125, 125, 1) 79%,
-    rgba(70, 70, 70, 1) 100%
+    rgba(60, 60, 60, 1) 100%
   );
-  /* background-color: var(--dashboard-gray); */
   display: grid;
   place-items: center;
+  margin: 0;
 }
 
 #windshield {
   position: relative;
-  /* background: linear-gradient(
-    180deg,
-    rgba(126, 229, 246, 1) 0%,
-    rgba(255, 255, 255, 1) 30%,
-    rgba(255, 255, 255, 1) 100%
-  ); */
   background: linear-gradient(
     0deg,
     rgba(2, 0, 36, 0) 70%,
@@ -210,48 +203,52 @@ p {
   );
   width: 100vw;
   height: 100vh;
+
+  /* From https://css.glass */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  margin: 0;
+
+  & div:nth-last-of-type(2) {
+    position: absolute;
+    left: -5em;
+    top: 0;
+    height: 100vh;
+    width: 10vw;
+    transform: rotate(-25deg);
+
+    background: linear-gradient(
+      90deg,
+      rgba(29, 29, 29, 1) 0%,
+      rgba(87, 87, 87, 1) 61%,
+      rgba(108, 108, 108, 1) 79%,
+      rgba(27, 27, 27, 1) 100%
+    );
+  }
 }
 
-#frame {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 10vw;
-  transform: rotate(-25deg);
-
-  background: linear-gradient(
-    0deg,
-    rgba(29, 29, 29, 1) 0%,
-    rgba(87, 87, 87, 1) 61%,
-    rgba(108, 108, 108, 1) 79%,
-    rgba(27, 27, 27, 1) 100%
-  );
-  /* background: var(--dashboard-dark-gray); */
-}
-
-#mirror::after {
-  position: absolute;
-  right: -6em;
-  top: 0;
-  width: 6em;
-  height: 3em;
-  content: "";
-  background-color: rgb(76, 76, 76);
-}
 main .date {
   position: absolute;
-  bottom: 3em;
+  bottom: 8em;
   right: 1em;
-  background-color: gray;
+  background: linear-gradient(
+    0deg,
+    rgba(79, 79, 79, 1) 16%,
+    rgba(140, 140, 140, 1) 33%,
+    rgba(79, 79, 79, 1) 50%,
+    rgba(140, 140, 140, 1) 66%,
+    rgba(79, 79, 79, 1) 84%
+  );
   height: fit-content;
+  width: fit-content;
   border: 0.5em solid black;
+  border-radius: 4px;
 }
 
 main .date::before {
   position: absolute;
   width: 5em;
-  height: 26em;
+  height: 24em;
   content: "";
   background-color: black;
   left: -2.9em;
@@ -260,19 +257,18 @@ main .date::before {
 }
 
 main section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  justify-content: center;
-  align-items: flex-start;
-  width: 40vw;
+  display: grid;
   height: 10vh;
+  gap: 1em;
+  margin: 0 1em 0 1em;
 }
 
 main section div {
+  grid-row: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  width: 100%;
 }
 
 main section p {
@@ -282,6 +278,10 @@ main section p {
   color: white;
   background-color: var(--time-red);
   text-transform: uppercase;
+}
+
+#dashboard section:nth-of-type(1) {
+  margin-top: 1em;
 }
 
 main section p:last-child {
@@ -294,7 +294,9 @@ main section span {
   font-size: 2em;
   color: var(--time-red);
   background-color: #222;
-  padding: 0.5em 1em 0.5em 1em;
+  padding: 0.2em;
+  text-align: center;
+  width: 3em;
 }
 
 main section:nth-child(3) span {
@@ -324,8 +326,6 @@ h3::after {
 }
 
 .am-pm {
-  height: 100%;
-  margin-top: 10px;
   font-size: 0.5em;
   display: flex;
   flex-direction: column;
@@ -348,7 +348,7 @@ h3::after {
 
 .timeNotation {
   height: 100%;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .timeNotation span {
@@ -385,6 +385,7 @@ fieldset {
   width: 6em;
   aspect-ratio: 1;
   padding: 0;
+
   border: none;
   display: grid;
 }
@@ -419,7 +420,7 @@ label:has(:checked) {
 
 /* het label na het label dat checked heeft kun je op klikken */
 label:has( :checked ) + label,
-/* en je kunt klikken op het 1e label als het laatste label checked heeft */
+/* en je kunt klikken op het 1e label als het laat   label checked heeft */
 label:nth-of-type(1):has( ~ label:last-of-type :checked ) {
   pointer-events: all;
 }
@@ -428,33 +429,343 @@ input {
   appearance: none;
   position: absolute;
   inset: 0;
-  margin: 0;
 }
 
 /* ////////////////////////////////////////////////// */
 /* Go button */
 /* /////////////////////////////////////////////////// */
 
-button {
+#go-button {
   position: absolute;
-  bottom: 5%;
-  left: 45vw;
-  border: 10px solid black;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 111, 111, 1) 0%,
-    rgba(159, 0, 32, 1) 100%
-  );
-  box-shadow: black 0.1em 0.1em 0.1em;
-  color: white;
-  font-family: BTTF;
-  font-size: 2vw;
-  width: 10%;
-  aspect-ratio: 1;
+  width: 100px;
+  height: 100px;
+  right: 19em;
+  bottom: 1.5em;
+  /* background-color: coral; */
+
+  & input {
+    display: block;
+  }
+
+  & label {
+    all: unset;
+    position: absolute;
+    width: 100px;
+    aspect-ratio: 1;
+    border: 5px solid black;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 111, 111, 1) 0%,
+      rgba(159, 0, 32, 1) 100%
+    );
+    box-shadow: black 0.1em 0.1em 0.1em;
+    color: white;
+    font-family: BTTF;
+    font-size: 1.5em;
+    text-align: center;
+    align-content: center;
+  }
 }
 
-button:active {
+#go-button:has(input:checked) label {
   transform: translate(0.1em, 0.1em);
   box-shadow: none;
 }
+
+html:has([value="1855"]:checked):has([value="future"]:checked) {
+  --background: url("../images/cowboy.jpeg");
+}
+
+html:has([value="1955"]:checked):has([value="future"]:checked) {
+  --background: url("../images/hillValley.jpeg");
+}
+
+html:has([value="1985"]:checked):has([value="future"]:checked) {
+  --background: url("../images/mall.jpeg");
+}
+
+html:has([value="2015"]:checked):has([value="future"]:checked) {
+  --background: url("../images/future.webp");
+}
+
+/* ////////////////////////////////////////////////// */
+/* Key */
+/* /////////////////////////////////////////////////// */
+
+delorean {
+  display: block;
+  /* animation: carVibration 0.4s linear infinite; */
+  scale: 1.02;
+}
+
+#key {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 30em;
+  bottom: 2em;
+  z-index: 9999;
+
+  & input {
+    display: none;
+  }
+
+  & label {
+    all: unset;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(
+      circle,
+      rgb(22, 22, 22) 26%,
+      rgb(129, 129, 129) 63%
+    );
+    border: 5px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  & span {
+    all: unset;
+    width: 15px;
+    height: 60px;
+    background: linear-gradient(
+      0deg,
+      rgba(79, 79, 79, 1) 0%,
+      rgba(142, 142, 142, 1) 10%,
+      rgba(79, 79, 79, 1) 30%,
+      rgba(56, 56, 56, 1) 50%,
+      rgba(79, 79, 79, 1) 70%,
+      rgba(142, 142, 142, 1) 90%,
+      rgba(79, 79, 79, 1) 100%
+    );
+    border-radius: 4px;
+    position: absolute;
+    top: 35px;
+    left: 58px;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  & ::after {
+    content: "";
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin-top: 70px;
+    background-image: radial-gradient(transparent 0 60%, gray 60%, silver 70%);
+    transition: transform 0.4s ease-in-out;
+    transform-origin: top center;
+  }
+}
+
+#key:has(input:checked) span {
+  transform: rotate(90deg);
+}
+
+#key:has(input:checked) :after {
+  transform: rotate(90deg);
+}
+
+delorean:has(#key input:checked) {
+  animation: carVibration 0.4s linear infinite;
+  animation-delay: 0.5s;
+}
+
+audio {
+  display: none;
+}
+
+@keyframes carVibration {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-1px);
+  }
+  20% {
+    transform: translateY(1px);
+  }
+  30% {
+    transform: translateY(-1.5px);
+  }
+  40% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(-0.5px);
+  }
+  60% {
+    transform: translateY(0.5px);
+  }
+  70% {
+    transform: translateY(-1px);
+  }
+  80% {
+    transform: translateY(1.2px);
+  }
+  90% {
+    transform: translateY(-0.8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ////////////////////////////////////////////////// */
+/* steeringwheel*/
+/* /////////////////////////////////////////////////// */
+
+#steeringwheel {
+  position: absolute;
+  bottom: 12em;
+  transition: transform 1s ease-in-out;
+  transform-origin: center center;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  z-index: 1;
+
+  & label {
+    all: unset;
+    position: absolute;
+    background: radial-gradient(
+      circle,
+      rgba(79, 79, 79, 0) 60%,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(66, 66, 66, 1) 70%,
+      rgba(98, 98, 98, 1) 80%,
+      rgba(66, 66, 66, 1) 90%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    height: 1000px;
+    width: 1000px;
+    border-radius: 50%;
+    z-index: 4;
+  }
+
+  & span {
+    all: unset;
+  }
+
+  /* midden van het stuur */
+  & span:nth-of-type(1) {
+    position: absolute;
+    width: 500px;
+    aspect-ratio: 1/1;
+    clip-path: polygon(
+      32% 23%,
+      74% 24%,
+      90% 34%,
+      90% 65%,
+      60% 90%,
+      40% 90%,
+      10% 65%,
+      10% 35%
+    );
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(66, 66, 66, 1) 50%,
+      rgba(98, 98, 98, 1) 80%,
+      rgba(66, 66, 66, 1) 100%
+    );
+    border-radius: 10px;
+    z-index: 2;
+  }
+
+  /* koppeldingen stuur (weet niet hoe dat heet) */
+  & span:nth-of-type(2),
+  span:nth-of-type(3),
+  span:nth-of-type(4) {
+    content: "";
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    margin-top: 4em;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(66, 66, 66, 1) 50%,
+      rgba(98, 98, 98, 1) 80%,
+      rgba(66, 66, 66, 1) 100%
+    );
+  }
+
+  /* koppelding links */
+  & span:nth-of-type(2) {
+    transform: rotate(-25deg);
+    margin-right: 30em;
+  }
+
+  /* koppelding rechts */
+  & span:nth-of-type(3) {
+    transform: rotate(25deg);
+    margin-left: 30em;
+  }
+  /* koppelding midden */
+  & > span:nth-of-type(4) {
+    height: 100px;
+    transform: rotate(90deg);
+    margin-top: 30em;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(66, 66, 66, 1) 25%,
+      rgba(98, 98, 98, 1) 50%,
+      rgba(66, 66, 66, 1) 75%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+  /* rood knopje stuur */
+  & span:nth-of-type(5),
+  span:nth-of-type(6) {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    background: red;
+    z-index: 9;
+    margin-right: -8em;
+    box-shadow: 5px 5px 5px darkred;
+  }
+
+  & span:nth-of-type(6) {
+    margin-right: -14em;
+  }
+  /* groen knopje stuur */
+  & span:nth-of-type(7) {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    background: lightgreen;
+    z-index: 9;
+    margin-right: 8em;
+    box-shadow: 5px 5px 5px green;
+  }
+  /* dmc logo */
+  & span:nth-of-type(8) {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    color: white;
+    margin-top: 200px;
+    margin-right: 2em;
+    font-size: 4em;
+    z-index: 3;
+  }
+}
+
+#steeringwheel:has(input:checked) {
+  transform: rotate(-0.4turn);
+}
+
+/* ////////////////////////////////////////////////// */
+/* counter 88-miles*/
+/* /////////////////////////////////////////////////// */
