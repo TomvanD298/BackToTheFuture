@@ -13,6 +13,11 @@
   src: url(../fonts/Inter/Inter-VariableFont_opsz\wght.ttf);
 }
 
+@font-face {
+  font-family: "dmc";
+  src: url(../fonts//Rustproof\ Body.otf);
+}
+
 html {
   --text-color: #fff;
   --dashboard-gray: rgb(86, 86, 86);
@@ -754,10 +759,11 @@ audio {
     position: absolute;
     width: 20px;
     height: 40px;
+    font-family: dmc;
     color: white;
     margin-top: 200px;
-    margin-right: 2em;
-    font-size: 4em;
+    margin-right: 3.5em;
+    font-size: 2.5em;
     z-index: 3;
   }
 }
