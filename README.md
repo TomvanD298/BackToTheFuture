@@ -60,3 +60,39 @@
  <p>Geholpen door Sanne met het counten van de maanden(waardoor ik ook de rest zo heb kunnen bouwen)</p>
  <a href="https://codepen.io/shooft/pen/emYvarP?editors=1100">Codepen RadioButton</a>
 </details>
+
+
+<h2>Week 2 10-03</h2>
+<details>
+  <summary>Maandag</summary>
+  <h3>Workshop</h3>
+ <h4>👨‍🦲🇳🇱 CQ basic</h4>
+  Op basis van container queries kunnen we dingen schalen en herrangschikken. Dit was erg leerzaam, alleen weet ik niet of ik dit ga gebruiken voor mijn website.
+  <h3>Gedaan vandaag</h3>
+
+
+
+  
+</details>
+<details>
+ <summary>Dinsdag</summary>
+ <h3>Workshop</h3>
+ <h4>👨‍🦲🇳🇱 Container style queries</h4>
+  <p> </p>
+ <h4> 👨‍🦲🇩🇪 Grid Masterclass</h4>
+ <p></p>
+
+<p>
+
+</p>
+
+<h3>Gedaan vandaag</h3>
+<a href="https://codepen.io/tom-realafford-nl/pen/raNGMjX">Snelheidsmeter</a>
+<br>
+<a href="https://codepen.io/tom-realafford-nl/pen/ZYEXKKp">Stuur</a>
+
+
+ <h3>Hulp</h3>
+
+ 
+</details>
