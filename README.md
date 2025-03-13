@@ -67,32 +67,35 @@
   <summary>Maandag</summary>
   <h3>Workshop</h3>
  <h4>👨‍🦲🇳🇱 CQ basic</h4>
-  Op basis van container queries kunnen we dingen schalen en herrangschikken. Dit was erg leerzaam, alleen weet ik niet of ik dit ga gebruiken voor mijn website.
+  <p>Op basis van container queries kunnen we dingen schalen en herrangschikken. Dit was erg leerzaam, alleen weet ik niet of ik dit ga gebruiken voor mijn website.</p>
+ <img width="500" alt="Scherm­afbeelding 2025-03-13 om 23 38 04" src="https://github.com/user-attachments/assets/b020ca84-002f-45c0-a4f4-deb6fbfd7fa7" />
+  <h4> 👨‍🦲🇩🇪 Grid Masterclass</h4>
+ <img width="500" alt="Scherm­afbeelding 2025-03-13 om 23 39 08" src="https://github.com/user-attachments/assets/f283f8dd-e434-4336-b957-afc3058419d6" />
   <h3>Gedaan vandaag</h3>
-
-
-
-  
+<p></p>Vandaag ben ik aan de slag gegaan met het opnieuw maken van mijn dashboard met css. Door de Grid masterclass van Nils ben ik het opnieuw gaan indelen en hierdoor is de code een stuk beter. </p>
+<img width="500" alt="Scherm­afbeelding 2025-03-10 om 15 21 40" src="https://github.com/user-attachments/assets/b4b4f171-ffcf-40e6-b83e-598ec09259be" />
+<p>Nu snap ik eindelijk grid een beetje en de meerwaarde ervan. ik snap niet waarom dit eigenlijk nooit heeft geklikt, maar nu ga ik een stuk meer dingen maken met grid.</p>
+<h4>Sleutel</h4>
+<p>Ook heb ik een sleutel gemaakt. Als je deze omdraait gaat er een animatie spelen en hoor je het geluid van de motor die opstart. Dit kan helaas niet zonder JS, dus heb ik een klein stukje code geschreven om de motor geluid te laten maken als je de sleutel omdraaid.</p>
+ <a href="https://codepen.io/tom-realafford-nl/pen/wBvrWaG">Codepen voor de sleutel</a>
 </details>
+
+
+
 <details>
  <summary>Dinsdag</summary>
  <h3>Workshop</h3>
- <h4>👨‍🦲🇳🇱 Container style queries</h4>
-  <p> </p>
- <h4> 👨‍🦲🇩🇪 Grid Masterclass</h4>
- <p></p>
-
-<p>
-
-</p>
+  <h4>👨‍🦲🇳🇱 Container style queries</h4>
+ <p>Dit had ik nodig voor mijn project. Ik had de functie nodig dat je 2 knoppen kon indrukken en daarmee een actie kon doen. Ik heb geleerd dat je 2x een :has kon stacken waardoor je een soort "and" functie kan schrijven in CSS. Hierdoor gaat er een wereld voor mij open.</p>
 
 <h3>Gedaan vandaag</h3>
-<a href="https://codepen.io/tom-realafford-nl/pen/raNGMjX">Snelheidsmeter</a>
+Vandaag heb ik vooral in losse code pennetjes gespeeld. Omdat mijn code van mijn website al wat ingewikkelder en groter wordt, vind ik het fijner om in losse objecten te werken, en deze later toe te voegen in mijn code.
+<a href="https://codepen.io/tom-realafford-nl/pen/raNGMjX"> Codepen voor de Snelheidsmeter</a>
 <br>
-<a href="https://codepen.io/tom-realafford-nl/pen/ZYEXKKp">Stuur</a>
+<a href="https://codepen.io/tom-realafford-nl/pen/ZYEXKKp"> Codepen voor het Stuur</a>
 
-
- <h3>Hulp</h3>
+<p>Aan het eide van de dag heb ik het stuur nog toe kunnen voegen en de volgende keer ga ik de snelheidsmeter toevoegen.</p>
+<img width="700" alt="Scherm­afbeelding 2025-03-13 om 23 42 43" src="https://github.com/user-attachments/assets/5487b7bb-7600-4236-ae52-5440253f0967" />
 
  
 </details>
