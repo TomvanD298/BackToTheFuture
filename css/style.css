@@ -500,8 +500,7 @@ html:has([value="2015"]:checked):has([value="future"]:checked) {
 
 delorean {
   display: block;
-  /* animation: carVibration 0.4s linear infinite; */
-  scale: 1.02;
+  scale: 1.01;
 }
 
 #key {
@@ -581,6 +580,7 @@ delorean {
 
 delorean:has(#key input:checked) {
   animation: carVibration 0.4s linear infinite;
+  animation-iteration-count: calc(36 / 0.4 * 1s);
   animation-delay: 0.5s;
 }
 
