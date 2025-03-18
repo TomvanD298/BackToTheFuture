@@ -2,6 +2,7 @@
 
  <p>Voor de Minor WEB Development moeten we met CSS een website maken puur met HTML en CSS<br> Ik heb gekozen om het dashboard van de Delorean uit Back to the Future <p>
   <img width="400px" alt="Scherm­afbeelding 2025-03-05 om 09 45 54" src="https://github.com/user-attachments/assets/d985bf8a-b03f-4dbf-b1c2-13fe66245b13" />
+<img width="400px" alt="Scherm­afbeelding 2025-03-18 om 13 37 56" src="https://github.com/user-attachments/assets/88ebf864-3b41-45ef-b07a-224ac3cf49df" />
 
 
  <h2> Ideë </h2>
@@ -29,9 +30,6 @@
   <p>Voor de middelste regel wilde ik de huidige tijd doen. Hier heb ik met behulp van Chris variabelen gemaakt en deze in CSS gedaan. Hiermee kon ik met de content:""; tag de dijd in de     html inladen(Dit vond ik een omweg, want je kan vanuit js direct de dom manipuleren, maar dit wilde Sanne XD)</p>
   <img width="300px" alt="Scherm­afbeelding 2025-03-05 om 09 34 52" src="https://github.com/user-attachments/assets/17bb1dc5-f6b5-4a02-bbc1-d4244b6cf1e0" />
 
-
-
-  
 </details>
 <details>
  <summary>Dinsdag</summary>
@@ -45,6 +43,10 @@
  Met de cursus van Roel gingen we aan de slag met variable fonts om deze vervolgens te animeren. Hier gingen we stap voor stap kijken hoe je en font kon beinvloeden om deze te style.
 </p>
 <img width="300px" alt="Scherm­afbeelding 2025-03-04 om 16 26 33" src="https://github.com/user-attachments/assets/5e164f63-1cb9-4c14-adaa-3b89a767ac0e" />
+ <br>
+<a href="https://codepen.io/tom-realafford-nl/pen/qEBrgNv">Codepen met geanimeerde font</a>
+ <br>
+<a href="https://codepen.io/tom-realafford-nl/pen/OPJpGRG">Codepen met layout voor BTTF</a>
 
 <h3>Gedaan vandaag</h3>
 <p>Wurksjops</p>
@@ -80,8 +82,6 @@
  <a href="https://codepen.io/tom-realafford-nl/pen/wBvrWaG">Codepen voor de sleutel</a>
 </details>
 
-
-
 <details>
  <summary>Dinsdag</summary>
  <h3>Workshop</h3>
@@ -97,5 +97,40 @@ Vandaag heb ik vooral in losse code pennetjes gespeeld. Omdat mijn code van mijn
 <p>Aan het eide van de dag heb ik het stuur nog toe kunnen voegen en de volgende keer ga ik de snelheidsmeter toevoegen.</p>
 <img width="700" alt="Scherm­afbeelding 2025-03-13 om 23 42 43" src="https://github.com/user-attachments/assets/5487b7bb-7600-4236-ae52-5440253f0967" />
 
+</details>
+
+
+<h2>Week 3 17-03</h2>
+<details>
+  <summary>Maandag</summary>
+  <h3>Workshop</h3>
+  <p>Vandaag en morgen hebben we geen workshops, we hebben alleen een korte presentatie gehad van Julia Miocene</p>
+ <br>
+ <p>Dit was erg interresant, maar had liever wat meer indept gehad over haar werkwijze of misschien iets van een live demo oid.</p>
  
+  <h3>Gedaan vandaag</h3>
+  Vandaag ben ik vooral bezig geweest met de snelheidsmeter en met het slopen en fixen van mijn code.</p>
+  <br>
+  <p>Ik had nog een hoop classes en divs er in staan en heb die eruit gehaald. Ook heb ik mijn code wat opgeschoond door het beter te nesten en overbodige dingen weg te halen.</p>
+  <br><br>
+  <p>Ook ben ik na aanleiding van een gesprek met sanne vrijdag opnieuw aan de slag gegaan met de snelheidsmeter. Dit kon veel beter dan met 88 divs XD</p>
+  <br>
+  <img width="300px" alt="Scherm­afbeelding 2025-03-18 om 14 02 17" src="https://github.com/user-attachments/assets/8a500b2f-827e-4944-9817-a29b2140af1d" />
+  <br>
+  <a href="https://codepen.io/CarterLi/pen/NWNJvPE?editors=1100 ">Bron</a><br>
+  <a href="https://codepen.io/tom-realafford-nl/pen/VYwyRKB">Codepen voor een betere Snelheidsmeter</a>
+</details>
+
+<details>
+ <summary>Dinsdag</summary>
+  <h3>Gedaan vandaag</h3>
+  <p>Vandaag ook bugs gefixt had ook het idee dat het dashboard een beetje te "clean" was voor een Delorean, dus ik wild wat kabels toevoegen</p>
+ <br>
+ <p>Ik had geen idee waar ik moest beginnen, maar na een klein beetje hulpt van Sanne, en die heeft een klein opset gemaakt om dit te maken.</p>
+ <br>
+  <img width="300px" alt="Scherm­afbeelding 2025-03-18 om 14 04 44" src="https://github.com/user-attachments/assets/8217a3d0-5cd8-45f3-ade8-adccb3d78f17" />
+ <br>
+  <a href="https://codepen.io/tom-realafford-nl/pen/bNGLmpL?editors=1100">Codepen voor één kabel</a>
+
+
 </details>
