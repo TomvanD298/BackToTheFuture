@@ -21,7 +21,7 @@
  <img src="https://github.com/user-attachments/assets/91c3e621-1883-4be6-8126-845a948be2f5" height="250px" alt="Delorean dashboard">
 </details>
 
-<h2>Week 2 03-03</h2>
+<h2>Week 2 --- [03-03]</h2>
  <details>
   <summary>Maandag</summary>
   <h3>Workshop</h3>
@@ -67,7 +67,7 @@
 </details>
 
 
-<h2>Week 2 10-03</h2>
+<h2>Week 3 --- [10-03]</h2>
 <details>
   <summary>Maandag</summary>
   <h3>Workshop</h3>
@@ -103,7 +103,7 @@ Vandaag heb ik vooral in losse code pennetjes gespeeld. Omdat mijn code van mijn
 </details>
 
 
-<h2>Week 3 17-03</h2>
+<h2>Week 4 --- [17-03]</h2>
 <details>
   <summary>Maandag</summary>
   <h3>Workshop</h3>
