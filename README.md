@@ -117,10 +117,15 @@ Vandaag heb ik vooral in losse code pennetjes gespeeld. Omdat mijn code van mijn
   <br><br>
   <p>Ook ben ik na aanleiding van een gesprek met sanne vrijdag opnieuw aan de slag gegaan met de snelheidsmeter. Dit kon veel beter dan met 88 divs XD</p>
   <br>
-  <img width="300px" alt="Scherm­afbeelding 2025-03-18 om 14 02 17" src="https://github.com/user-attachments/assets/8a500b2f-827e-4944-9817-a29b2140af1d" />
-  <br>
+  <img width="200px" alt="Scherm­afbeelding 2025-03-18 om 14 02 17" src="https://github.com/user-attachments/assets/8a500b2f-827e-4944-9817-a29b2140af1d" />
   <a href="https://codepen.io/CarterLi/pen/NWNJvPE?editors=1100 ">Bron</a><br>
   <a href="https://codepen.io/tom-realafford-nl/pen/VYwyRKB">Codepen voor een betere Snelheidsmeter</a>
+  <br><br>
+
+  <p>Ook heb ik een kleine animatie gemaakt voor het tijdreizen. Hierbij heb ik een div laten pulsen en een png van bliksem geanimeerd.</p>
+<img width="500" alt="Scherm­afbeelding 2025-03-18 om 14 10 26" src="https://github.com/user-attachments/assets/c9e0711e-ea83-4720-9aeb-16f85e463332" />
+
+  
 </details>
 
 <details>
