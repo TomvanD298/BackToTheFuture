@@ -47,7 +47,7 @@ body {
 }
 
 /* ////////////////////////////////////////////////// */
-/* Title */
+/* Titel */
 /* /////////////////////////////////////////////////// */
 
 header {
@@ -58,7 +58,6 @@ header {
   place-items: center;
   z-index: 999999999999999;
   animation: --rise 2s both ease-out, --away 3s 2s both ease-in;
-  /* animation: --rise 2s both ease-out; */
 
   & span {
     font-family: BTTF;
@@ -66,7 +65,7 @@ header {
     color: black;
     text-align: center;
 
-    -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: lightblue;
     font-synthesis: none;
   }
@@ -162,15 +161,17 @@ header {
 }
 
 /* ////////////////////////////////////////////////// */
-/* car */
+/* Delorean */
 /* /////////////////////////////////////////////////// */
+
 p {
   bottom: 0;
   color: black;
   text-align: center;
 }
 
-#background {
+/* Achtergrond */
+delorean > div:first-of-type {
   position: absolute;
   bottom: 10em;
   left: 0;
@@ -180,9 +181,12 @@ p {
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  transition-delay: 6s;
+  transition-timing-function: ease-in-out;
 }
 
-#dashboard {
+/* dashboard  */
+delorean > section:nth-of-type(2) {
   position: absolute;
   width: 100vw;
   height: 40vh;
@@ -197,13 +201,49 @@ p {
   display: grid;
   place-items: center;
   margin: 0;
+
+  /* Datum  */
+  > section {
+    position: absolute;
+    bottom: 8em;
+    right: 1em;
+    background: linear-gradient(
+      0deg,
+      rgba(79, 79, 79, 1) 16%,
+      rgba(140, 140, 140, 1) 33%,
+      rgba(79, 79, 79, 1) 50%,
+      rgba(140, 140, 140, 1) 66%,
+      rgba(79, 79, 79, 1) 84%
+    );
+    height: fit-content;
+    width: fit-content;
+    border: 0.5em solid black;
+    border-radius: 4px;
+    z-index: 2;
+
+    > section:nth-of-type(1) {
+      margin-top: 1em;
+    }
+  }
+
+  > section::before {
+    position: absolute;
+    width: 5em;
+    height: 24em;
+    content: "";
+    background-color: black;
+    left: -2.9em;
+    bottom: 0;
+    clip-path: polygon(50% 0, 10% 75%, 50% 100%);
+  }
 }
 
-#windshield {
+/* Voorruit */
+delorean > section:first-of-type {
   position: relative;
   background: linear-gradient(
     0deg,
-    rgba(2, 0, 36, 0) 70%,
+    rgba(2, 0, 36, 0) 80%,
     rgba(0, 212, 255, 0.4976584383753502) 100%
   );
   width: 100vw;
@@ -232,82 +272,55 @@ p {
   }
 }
 
-main .date {
-  position: absolute;
-  bottom: 8em;
-  right: 1em;
-  background: linear-gradient(
-    0deg,
-    rgba(79, 79, 79, 1) 16%,
-    rgba(140, 140, 140, 1) 33%,
-    rgba(79, 79, 79, 1) 50%,
-    rgba(140, 140, 140, 1) 66%,
-    rgba(79, 79, 79, 1) 84%
-  );
-  height: fit-content;
-  width: fit-content;
-  border: 0.5em solid black;
-  border-radius: 4px;
-}
-
-main .date::before {
-  position: absolute;
-  width: 5em;
-  height: 24em;
-  content: "";
-  background-color: black;
-  left: -2.9em;
-  bottom: 0;
-  clip-path: polygon(50% 0, 10% 75%, 50% 100%);
-}
-
 main section {
   display: grid;
   height: 10vh;
   gap: 1em;
   margin: 0 1em 0 1em;
+
+  & div {
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+  }
+
+  & p {
+    padding: 0 0.5em 0 0.5em;
+    font-family: "inter";
+    font-size: 1em;
+    color: white;
+    background-color: var(--time-red);
+    text-transform: uppercase;
+    border-top: 2px solid rgb(133, 12, 36);
+    border-right: 2px solid rgb(133, 12, 36);
+  }
+
+  & p:last-child {
+    background-color: black;
+    margin: 1em 0 1em 0;
+  }
+
+  & span {
+    font-family: digital-7;
+    font-size: 2em;
+    color: var(--time-red);
+    background: rgb(44, 44, 44);
+    padding: 0.2em;
+    text-align: center;
+    width: 3em;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+  }
 }
 
-main section div {
-  grid-row: 1 / -1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  width: 100%;
-}
-
-main section p {
-  padding: 0 0.5em 0 0.5em;
-  font-family: "inter";
-  font-size: 1em;
-  color: white;
-  background-color: var(--time-red);
-  text-transform: uppercase;
-}
-
-#dashboard section:nth-of-type(1) {
-  margin-top: 1em;
-}
-
-main section p:last-child {
-  background-color: black;
-  margin: 1em 0 1em 0;
-}
-
-main section span {
-  font-family: digital-7;
-  font-size: 2em;
-  color: var(--time-red);
-  background-color: #222;
-  padding: 0.2em;
-  text-align: center;
-  width: 3em;
-}
-
+/* Kleur van de 2e rij met een datum */
 main section:nth-child(3) span {
   color: var(--time-green);
 }
 
+/* Kleur van de 3e rij met een datum */
 main section:nth-child(5) span {
   color: var(--time-yellow);
 }
@@ -330,38 +343,40 @@ h3::after {
   content: "";
 }
 
-.am-pm {
+delorean section:nth-of-type(2) div:nth-of-type(4) {
   font-size: 0.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  & span {
+    display: block;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: var(--time-red);
+    border: none;
+  }
+
+  & span:nth-of-type(2) {
+    background-color: var(--time-yellow);
+  }
 }
 
-.am-pm span {
-  display: block;
-  padding: 0;
-  margin: 0 0 0.5em 0;
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 50%;
-  background-color: var(--time-red);
-}
-
-.am-pm span:nth-of-type(2) {
-  background-color: var(--time-yellow);
-}
-
-.timeNotation {
+delorean section:nth-of-type(2) div:nth-of-type(6) {
   height: 100%;
   margin-top: 30px;
-}
 
-.timeNotation span {
-  background-color: var(--time-yellow);
-  border-radius: 50%;
-  max-width: 10px;
-  max-height: 10px;
-  padding: 5px;
+  & span {
+    background-color: var(--time-yellow);
+    border-radius: 50%;
+    max-width: 10px;
+    max-height: 10px;
+    padding: 5px;
+    border: none;
+  }
 }
 
 #month::after {
@@ -385,7 +400,6 @@ h3::after {
 }
 
 /* Met behulp van Sanne gemaakt. */
-
 fieldset {
   width: 6em;
   aspect-ratio: 1;
@@ -410,13 +424,15 @@ label {
 
   width: 100%;
   height: 100%;
-  background: black;
+  background: rgb(44, 44, 44);
   color: var(--time-red);
   font-family: digital-7;
   font-size: 2em;
   padding: 0.2em;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
 }
 
 label:has(:checked) {
@@ -437,16 +453,15 @@ input {
 }
 
 /* ////////////////////////////////////////////////// */
-/* Go button */
+/* Go knop */
 /* /////////////////////////////////////////////////// */
 
-#go-button {
+delorean > section:nth-of-type(3) {
   position: absolute;
   width: 100px;
   height: 100px;
   right: 19em;
   bottom: 1.5em;
-  /* background-color: coral; */
 
   & input {
     display: block;
@@ -473,7 +488,7 @@ input {
   }
 }
 
-#go-button:has(input:checked) label {
+delorean > section:nth-of-type(3):has(input:checked) label {
   transform: translate(0.1em, 0.1em);
   box-shadow: none;
 }
@@ -495,140 +510,10 @@ html:has([value="2015"]:checked):has([value="future"]:checked) {
 }
 
 /* ////////////////////////////////////////////////// */
-/* Key */
+/* Stuur */
 /* /////////////////////////////////////////////////// */
 
-delorean {
-  display: block;
-  scale: 1.01;
-}
-
-#key {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  left: 30em;
-  bottom: 2em;
-  z-index: 9999;
-
-  & input {
-    display: none;
-  }
-
-  & label {
-    all: unset;
-    width: 80px;
-    height: 80px;
-    background: radial-gradient(
-      circle,
-      rgb(22, 22, 22) 26%,
-      rgb(129, 129, 129) 63%
-    );
-    border: 5px solid black;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-  }
-
-  & span {
-    all: unset;
-    width: 15px;
-    height: 60px;
-    background: linear-gradient(
-      0deg,
-      rgba(79, 79, 79, 1) 0%,
-      rgba(142, 142, 142, 1) 10%,
-      rgba(79, 79, 79, 1) 30%,
-      rgba(56, 56, 56, 1) 50%,
-      rgba(79, 79, 79, 1) 70%,
-      rgba(142, 142, 142, 1) 90%,
-      rgba(79, 79, 79, 1) 100%
-    );
-    border-radius: 4px;
-    position: absolute;
-    top: 35px;
-    left: 58px;
-    transform-origin: center center;
-    transition: transform 0.3s ease-in-out;
-    pointer-events: none;
-  }
-
-  & ::after {
-    content: "";
-    width: 50px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    margin-top: 70px;
-    background-image: radial-gradient(transparent 0 60%, gray 60%, silver 70%);
-    transition: transform 0.4s ease-in-out;
-    transform-origin: top center;
-  }
-}
-
-#key:has(input:checked) span {
-  transform: rotate(90deg);
-}
-
-#key:has(input:checked) :after {
-  transform: rotate(90deg);
-}
-
-delorean:has(#key input:checked) {
-  animation: carVibration 0.4s linear infinite;
-  animation-iteration-count: calc(36 / 0.4 * 1s);
-  animation-delay: 0.5s;
-}
-
-audio {
-  display: none;
-}
-
-@keyframes carVibration {
-  0% {
-    transform: translateY(0px);
-  }
-  10% {
-    transform: translateY(-1px);
-  }
-  20% {
-    transform: translateY(1px);
-  }
-  30% {
-    transform: translateY(-1.5px);
-  }
-  40% {
-    transform: translateY(1px);
-  }
-  50% {
-    transform: translateY(-0.5px);
-  }
-  60% {
-    transform: translateY(0.5px);
-  }
-  70% {
-    transform: translateY(-1px);
-  }
-  80% {
-    transform: translateY(1.2px);
-  }
-  90% {
-    transform: translateY(-0.8px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* ////////////////////////////////////////////////// */
-/* steeringwheel*/
-/* /////////////////////////////////////////////////// */
-
-#steeringwheel {
+delorean > div:nth-of-type(2) {
   position: absolute;
   bottom: 12em;
   transition: transform 1s ease-in-out;
@@ -754,7 +639,7 @@ audio {
     margin-right: 8em;
     box-shadow: 5px 5px 5px green;
   }
-  /* dmc logo */
+  /* DMC logo */
   & span:nth-of-type(8) {
     position: absolute;
     width: 20px;
@@ -768,10 +653,657 @@ audio {
   }
 }
 
-#steeringwheel:has(input:checked) {
+delorean > div:nth-of-type(2):has(input:checked) {
   transform: rotate(-0.4turn);
 }
 
 /* ////////////////////////////////////////////////// */
-/* counter 88-miles*/
+/* Snelheidsmeter - Teller 88-miles */
 /* /////////////////////////////////////////////////// */
+
+delorean > section:nth-of-type(4) {
+  position: absolute;
+  bottom: 16em;
+  width: 500px;
+  height: 200px;
+  background-color: black;
+  border: 5px solid gray;
+  border-radius: 0 30% 0 0;
+  margin-left: -1em;
+  padding-top: 4em;
+
+  & #start {
+    display: none;
+  }
+
+  & label {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  & div {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    counter-reset: num var(--num);
+    background-color: black;
+    color: crimson;
+    font-size: 6rem;
+    padding: 1rem;
+    width: 200px;
+    margin-left: -40px;
+  }
+  & div::after {
+    content: counter(num);
+    font-family: digital-7;
+  }
+
+  & div::before {
+    position: absolute;
+    content: "888";
+    opacity: 0.3;
+    font-family: digital-7;
+  }
+}
+
+html:has([value="future"]:checked) delorean > section:nth-of-type(4) div {
+  animation: counter 4.35s forwards ease-out;
+}
+
+/* ------------ Bron ------------ */
+/* ------------ https://codepen.io/CarterLi/pen/NWNJvPE?editors=1100 ------------ */
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 88;
+  }
+}
+
+/* ////////////////////////////////////////////////// */
+/* Onweer */
+/* /////////////////////////////////////////////////// */
+
+/* MBV tutorial op youtube https://www.youtube.com/watch?v=tLCU2RupVo4 */
+delorean > section:nth-of-type(5) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+delorean > section:nth-of-type(5) {
+  z-index: -999;
+}
+
+delorean section:nth-of-type(5) div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/lightining.png");
+  top: -100px;
+  transform: rotate(180deg);
+
+  opacity: 0;
+  z-index: 1;
+}
+
+html:has([value="future"]:checked) delorean section:nth-of-type(5) div::before {
+  animation: lightining 8s linear forwards;
+  animation-delay: 2.35s;
+}
+
+delorean > section:nth-of-type(5) span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(16, 94, 120, 1) 0%,
+    rgba(199, 241, 255, 1) 50%,
+    rgba(173, 216, 230, 1) 100%
+  );
+  box-shadow: 0 0 10px #add8e6, 0 0 30px #add8e6, 0 0 60px #add8e6,
+    0 0 90px #add8e6;
+  opacity: 0;
+}
+
+html:has([value="future"]:checked) delorean section:nth-of-type(5) span {
+  animation: hyperdrive 1s infinite;
+  animation-iteration-count: 6;
+  animation-delay: 3.35s;
+}
+
+@keyframes lightining {
+  0% {
+    opacity: 0;
+    transform: rotate(0);
+  }
+  20% {
+    opacity: 0;
+  }
+  21%,
+  50% {
+    opacity: 1;
+    scale: 2;
+  }
+  25%,
+  60% {
+    opacity: 1;
+    scale: 4;
+  }
+  30%,
+  70% {
+    opacity: 0;
+  }
+  31%,
+  71% {
+    opacity: 1;
+    scale: 0.6;
+  }
+  35%,
+  75% {
+    opacity: 1;
+    scale: 2.6;
+  }
+
+  40%,
+  80% {
+    opacity: 0;
+    scale: 0.3;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(50turn);
+  }
+}
+
+@keyframes hyperdrive {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2.5);
+    opacity: 0.3;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ////////////////////////////////////////////////// */
+/* Kabel - Rood */
+/* /////////////////////////////////////////////////// */
+
+/* Begin gemaakt samen met Sanne */
+/* https://codepen.io/tom-realafford-nl/pen/bNGLmpL?editors=1100 */
+
+delorean > section:nth-of-type(6) {
+  position: absolute;
+  left: 25em;
+  top: 25em;
+
+  & div {
+    position: relative;
+
+    width: 2em;
+    height: 2em;
+    background-image: linear-gradient(45deg, #500, #c00 70%, #900);
+    border-radius: 50%;
+
+    translate: 0.3em 0.3em;
+    rotate: 0.3deg;
+  }
+
+  &
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div {
+    rotate: 1deg;
+  }
+}
+
+html:has([value="future"]:checked) delorean > section:nth-of-type(6) div {
+  animation: --wiggle 2s infinite ease-in-out;
+}
+
+html:has([value="future"]:checked) delorean > section:nth-of-type(7) div {
+  animation: --wiggle 1.4s infinite ease-in-out;
+}
+
+html:has([value="future"]:checked) delorean > section:nth-of-type(8) div {
+  animation: --wiggle 1s infinite ease-in-out;
+}
+
+@keyframes --wiggle {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(0.2px);
+  }
+}
+
+/* ////////////////////////////////////////////////// */
+/* Kabel - Groen */
+/* /////////////////////////////////////////////////// */
+
+delorean > section:nth-of-type(7) {
+  position: absolute;
+  left: 25em;
+  top: 25em;
+
+  & div {
+    position: relative;
+
+    width: 2em;
+    height: 2em;
+    background-image: linear-gradient(45deg, #050, #0c0 70%, #090);
+    border-radius: 50%;
+
+    translate: 0.3em 0.3em;
+    rotate: -2deg;
+  }
+
+  &
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div {
+    rotate: 3deg;
+  }
+}
+
+/* ////////////////////////////////////////////////// */
+/* Kabel - Geel */
+/* /////////////////////////////////////////////////// */
+
+delorean > section:nth-of-type(8) {
+  position: absolute;
+  left: 25em;
+  top: 25em;
+
+  & div {
+    position: relative;
+
+    width: 2em;
+    height: 2em;
+    background-image: linear-gradient(45deg, #550, #fc0 70%, #990);
+    border-radius: 50%;
+
+    translate: 0.3em 0.3em;
+    rotate: -1deg;
+  }
+
+  &
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div
+    div {
+    rotate: -2deg;
+  }
+}
+
+/* ////////////////////////////////////////////////// */
+/* Autosleutel */
+/* /////////////////////////////////////////////////// */
+
+delorean {
+  display: block;
+  scale: 1.01;
+}
+
+delorean > section:last-of-type {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 30em;
+  bottom: 2em;
+  z-index: 9999;
+
+  & input {
+    display: none;
+  }
+
+  & label {
+    all: unset;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(
+      circle,
+      rgb(22, 22, 22) 26%,
+      rgb(129, 129, 129) 63%
+    );
+    border: 5px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  & span {
+    all: unset;
+    width: 15px;
+    height: 60px;
+    background: linear-gradient(
+      0deg,
+      rgba(79, 79, 79, 1) 0%,
+      rgba(142, 142, 142, 1) 10%,
+      rgba(79, 79, 79, 1) 30%,
+      rgba(56, 56, 56, 1) 50%,
+      rgba(79, 79, 79, 1) 70%,
+      rgba(142, 142, 142, 1) 90%,
+      rgba(79, 79, 79, 1) 100%
+    );
+    border-radius: 4px;
+    position: absolute;
+    top: 35px;
+    left: 58px;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  & ::after {
+    content: "";
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin-top: 70px;
+    background-image: radial-gradient(transparent 0 60%, gray 60%, silver 70%);
+    transition: transform 0.4s ease-in-out;
+    transform-origin: top center;
+    opacity: 1;
+  }
+}
+
+delorean > section:last-of-type:has(input:checked) span {
+  transform: rotate(90deg);
+}
+
+delorean > section:last-of-type:has(input:checked) :after {
+  transform: rotate(90deg);
+}
+
+delorean:has(> section:last-of-type input:checked) {
+  animation: --carVibration 0.4s linear infinite;
+  animation-iteration-count: calc(36 / 0.4 * 1s);
+  animation-delay: 0.5s;
+}
+
+audio {
+  display: none;
+}
+
+@keyframes --carVibration {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-1px);
+  }
+  20% {
+    transform: translateY(1px);
+  }
+  30% {
+    transform: translateY(-1.5px);
+  }
+  40% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(-0.5px);
+  }
+  60% {
+    transform: translateY(0.5px);
+  }
+  70% {
+    transform: translateY(-1px);
+  }
+  80% {
+    transform: translateY(1.2px);
+  }
+  90% {
+    transform: translateY(-0.8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Titel */
+  header {
+    & span {
+      -webkit-text-stroke-width: 2px;
+    }
+    & section > div:first-of-type {
+      margin-left: 40px;
+    }
+
+    & section > div:first-of-type span:nth-of-type(2) {
+      margin: 0 0 0 -20px;
+    }
+  }
+
+  /* Dashboard */
+  delorean > section:nth-of-type(2) {
+    bottom: -6em;
+  }
+
+  delorean > section:nth-of-type(2) > section {
+    scale: 0.6;
+    right: -9em;
+  }
+
+  /* Go-Knop */
+  delorean > section:nth-of-type(3) {
+    right: 8em;
+    bottom: 2em;
+  }
+
+  /* Stuur */
+  delorean > div:nth-of-type(2) {
+    display: none;
+  }
+  /* Snelheidsmeter */
+  delorean > section:nth-of-type(4) {
+    display: none;
+  }
+
+  delorean > section:nth-of-type(6),
+  delorean > section:nth-of-type(7),
+  delorean > section:nth-of-type(8) {
+    display: none;
+  }
+
+  delorean > section:last-of-type {
+    display: none;
+  }
+}

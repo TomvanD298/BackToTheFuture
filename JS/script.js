@@ -1,3 +1,4 @@
+// Functie om de tijd op te halen van een live server en dit in een variabel naar CSS zetten.
 function updateDateTime() {
     const now = new Date();
     const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
@@ -13,11 +14,12 @@ function updateDateTime() {
   setInterval(updateDateTime, 1000);
 
 
+// Dit is alleen om het geluid af te spelen en te stoppen als je op een knop(checkbox) klikt.
+// Autosleutel
+const keyToggle = document.getElementById('ignition');
+const carSound = document.getElementById('carSound');
 
-  const keyToggle = document.getElementById('ignition');
-  const carSound = document.getElementById('carSound');
-
-  keyToggle.addEventListener('change', () => {
+keyToggle.addEventListener('change', () => {
     if (keyToggle.checked) {
         carSound.play();
     } else {
@@ -25,3 +27,22 @@ function updateDateTime() {
         carSound.currentTime = 0;
     }
 });
+
+
+// Go knop
+const goButton = document.getElementById('go');
+const drivingSound = document.getElementById('drivingSound');
+
+goButton.addEventListener('change', () => {
+  if (goButton.checked) {
+    drivingSound.play();
+  } else {
+    drivingSound.pause();
+    drivingSound.currentTime = 0;
+  }
+});
+
+
+// 
+// 
+// 
