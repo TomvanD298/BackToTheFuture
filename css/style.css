@@ -521,7 +521,7 @@ delorean > div:nth-of-type(2) {
   display: flex;
   place-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
 
   & label {
     all: unset;
@@ -671,6 +671,7 @@ delorean > section:nth-of-type(4) {
   border-radius: 0 30% 0 0;
   margin-left: -1em;
   padding-top: 4em;
+  z-index: 1;
 
   & #start {
     display: none;
