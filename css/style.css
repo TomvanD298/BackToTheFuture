@@ -571,7 +571,7 @@ delorean > div:nth-of-type(2) {
     z-index: 2;
   }
 
-  /* koppeldingen stuur (weet niet hoe dat heet) */
+  /* stuur onderdeel (weet niet hoe dat heet) */
   & span:nth-of-type(2),
   span:nth-of-type(3),
   span:nth-of-type(4) {
@@ -589,18 +589,18 @@ delorean > div:nth-of-type(2) {
     );
   }
 
-  /* koppelding links */
+  /* stuur onderdeel links */
   & span:nth-of-type(2) {
     transform: rotate(-25deg);
     margin-right: 30em;
   }
 
-  /* koppelding rechts */
+  /* stuur onderdeel rechts */
   & span:nth-of-type(3) {
     transform: rotate(25deg);
     margin-left: 30em;
   }
-  /* koppelding midden */
+  /* stuur onderdeel midden */
   & > span:nth-of-type(4) {
     height: 100px;
     transform: rotate(90deg);
